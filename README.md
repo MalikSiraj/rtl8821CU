@@ -70,6 +70,12 @@ Make sure `8821cu.ko` file present on that directory
 sudo dkms status
 ``
 ### ARM architecture tweak for this driver (this solves compilation problem of this driver):
+First upgrade the kernel to latest available by using
+``
+sudo apt-get update
+sudo apt-get upgrade
+``
+
 Install linux headers and source 
 For armbian use `armbian-config` utility to install them
 ```
