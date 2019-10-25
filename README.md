@@ -71,7 +71,7 @@ sudo dkms status
 ``
 ### ARM architecture tweak for this driver (this solves compilation problem of this driver):
 Install linux headers and source 
-For armbian use 'armbian-config' utility to install them
+For armbian use `armbian-config` utility to install them
 ```
 sudo cp /lib/modules/$(uname -r)/build/arch/arm/Makefile /lib/modules/$(uname -r)/build/arch/arm/Makefile.$(date +%Y%m%d%H%M)
 sudo sed -i 's/-msoft-float//' /lib/modules/$(uname -r)/build/arch/arm/Makefile
