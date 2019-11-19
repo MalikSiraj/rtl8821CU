@@ -80,9 +80,12 @@ Install linux headers and source
 For armbian use `armbian-config` utility to install them
  
 Now go to the `build/rtl8821CU/Makefile` and replace `CONFIG_MP_VHT_HW_TX_MODE = y` to `CONFIG_MP_VHT_HW_TX_MODE = n`
-
+```
+sed 's/CONFIG_MP_VHT_HW_TX_MODE = y/CONFIG_MP_VHT_HW_TX_MODE = n/' Makefile > Makefile.modified
+```
 ```
 sudo cp /lib/modules/$(uname -r)/build/arch/arm/Makefile /lib/modules/$(uname -r)/build/arch/arm/Makefile.$(date +%Y%m%d%H%M)
 sudo sed -i 's/-msoft-float//' /lib/modules/$(uname -r)/build/arch/arm/Makefile
 sudo ln -s /lib/modules/$(uname -r)/build/arch/arm /lib/modules/$(uname -r)/build/arch/armv7l
+
 ```
