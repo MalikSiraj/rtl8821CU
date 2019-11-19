@@ -46,7 +46,9 @@ sudo usb_modeswitch -KW -v 0bda -p 1a2b
 It should work.
 
 ## Build and install without DKMS
-Use following commands:
+For building in ARM architecture first perform tweaks in the configuration by following "ARM architecture tweak for this driver (this solves compilation problem of this driver)"
+
+Use following commands: 
 ```
 cd ~/build/rtl8821CU
 make
